@@ -17,3 +17,10 @@ p
 {
 	line-height: 0.5em;
 }
+#projects
+{
+        float: left;
+        border-size: 1px;
+        border-color: black;
+        padding: 30px 50px 30px 50px;
+}
