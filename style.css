@@ -20,7 +20,8 @@ p
 #projects
 {
         float: left;
+        border-style: soild;
         border-size: 1px;
-        border-color: black;
+        border-radius: 15px;
         padding: 30px 50px 30px 50px;
 }
