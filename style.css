@@ -21,7 +21,7 @@ p
 {
         float: left;
         border-style: solid;
-        border-size: 1px;
+        border-width: 1px;
         border-radius: 15px;
         padding: 30px 50px 30px 50px;
 }
