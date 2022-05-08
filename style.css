@@ -24,3 +24,19 @@ p
         border-width: 1px;
         border-radius: 10px;
 }
+nav
+{
+	border: solid 1px blue;
+	background-color: cadetblue;
+	height: 100px;
+	overflow: hidden;
+}
+nav li
+{
+	list-style: none;
+	width: 150px
+}
+nav li.selected
+{
+	background-color: blue;
+}
