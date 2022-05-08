@@ -34,7 +34,8 @@ nav
 nav li
 {
 	list-style: none;
-	width: 150px
+	float: left;
+	width: 150px;
 }
 nav li#selected
 {
