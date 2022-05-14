@@ -34,6 +34,7 @@ nav
 }
 nav li
 {
+	background-color: aqua;
 	list-style: none;
 	float: left;
 	width: 150px;
