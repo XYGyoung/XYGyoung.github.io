@@ -29,12 +29,16 @@ nav
 	background-color: cadetblue;
 	overflow: hidden;
 	color: white;
+	height: 25px;
+	padding: 0px;
 }
 nav li
 {
 	list-style: none;
 	float: left;
 	width: 150px;
+	height: 25px;
+	margin: -15px 1px 0px 1px;
 }
 nav li#selected
 {
