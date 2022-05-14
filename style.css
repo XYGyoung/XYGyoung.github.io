@@ -26,9 +26,9 @@ p
 }
 nav
 {
-	border: solid 1px blue;
 	background-color: cadetblue;
 	overflow: hidden;
+	color: white;
 }
 nav li
 {
