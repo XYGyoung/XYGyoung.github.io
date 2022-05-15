@@ -38,6 +38,10 @@ nav li#selected
 {
 	background-color: blue;
 }
+nav li a
+{
+	color: white;
+}
 article
 {
 	text-align: left;
