@@ -2,26 +2,42 @@ body
 {
 	text-align: center;
 	font-family: sans-serif;
-	background-color: skyblue;
+	background: linear-gradient(to bottom,rgb(0, 128, 255),rgb(0, 128, 255),skyblue) no-repeat fixed 100%;
+}
+header
+{
+	background: linear-gradient(to bottom,black,blue);
+}
+header p
+{
+	color: white;
 }
 h1
 {
-	color:blue;
+	color:skyblue;
 }
 a
 {
 	text-decoration: none;
-	color:black;
+	color: white;
 }
-p
+li.natural
 {
-	line-height: 0.5em;
+	color: white;
+	border: 1px white solid;
+	border-radius: 5px;	
 }
-ul.nav
+nav.nav.navbar-nav ul.nav.nav-tabs.nav-justified li.active
 {
-	background-color: rgb(105, 195, 251);
+	background: linear-gradient(to bottom,rgb(0, 64, 255),rgb(0, 128, 255));
+	border-bottom: none;;
+	color: black;
 }
-nav.nav.navbar-nav.fixed-top ul.nav.nav-tabs.nav-justified li.active
+.content
 {
-	background-color: skyblue;
+	margin: 10px;
+	padding: 10px;
+	background: linear-gradient(to bottom,gray,rgba(128, 128, 128, 0.7),rgba(128, 128, 128, 0.1));
+	border: solid 1px;
+	border-radius: 10px;
 }
