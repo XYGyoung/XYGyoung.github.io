@@ -19,6 +19,10 @@ h1
 a
 {
 	text-decoration: none;
+	color: black;
+}
+li a
+{
 	color: white;
 }
 li.natural
