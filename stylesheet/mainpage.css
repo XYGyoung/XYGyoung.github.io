@@ -45,3 +45,11 @@ nav.nav.navbar-nav ul.nav.nav-tabs.nav-justified li.active
 	border-radius: 10px;
 	min-height: 256px;
 }
+.card
+{
+	margin: 20px;
+}
+.card-header, .card-footer
+{
+	background: #999;
+}
