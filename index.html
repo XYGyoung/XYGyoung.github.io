@@ -6,63 +6,71 @@
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
     <title>向远小组网站</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="imgs/logo.png" rel="shortcut icon" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet/mainpage.css">
-    <script src="//cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
     <header class="fixed-top">
-        <h1>向远小组</h1>
-        <p>没错，这是我整的！</p>
         <nav class="nav navbar-nav" role="navigation">
-            <ul class="nav nav-tabs nav-justified">
-                <li class="nav-link active"><a href="#">首页</a></li>
-                <li class="nav-link natural"><a href="friends/index.html">我的同学</a></li>
-                <li class="nav-link natural"><a href="craft/index.html">Craft</a></li>
-                <li class="nav-link natural"><a href="xyos/index.html">向远系统</a></li>
-                <li class="nav-link natural"><a href="schtool/index.html">校园工具</a></li>
+            <ul class="nav">
+                <img id="logo" src="imgs/logo.png" width="24" height="24">
+                <li class="nav-link"><a href="#">首页</a></li>
+                <li class="nav-link"><a href="blog/index.html">博客</a></li>
+                <li class="nav-link"><a href="craft/index.html">Craft</a></li>
+                <li class="nav-link"><a href="xyos/index.html">向远系统</a></li>
+                <li class="nav-link"><a href="schtool/index.html">校园工具</a></li>
+                <li class="nav-link dropdown">
+                    <a href="#" id="dropdownMenuLink" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">其他</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a href="keymake/index.html" class="dropdown-item">密钥生成器</a>
+                        <a href="https://vdse.bdstatic.com//192d9a98d782d9c74c96f09db9378d93.mp4" class="dropdown-item">千万不要点</a>
+                        <a href="https://space.bilibili.com/511437326" class="dropdown-item">我的B站</a>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
-    <br><br><br><br><br><br><br>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-4 content">
-                <h4 style="color: brown;"><small>为什么创建这个网站？</small></h4>
-                <p>
-                    作者突发奇想，想做网站，<br>
-                    自己学了一些技术，<br>
-                    就把这个网站做出来了。<br>
-                    同时也是为宣传自家产品，<br>
-                    大家有兴趣可以看看。
-                </p>
-            </div>
-            <div class="col-4 content">
-                <h4 style="color: brown;"><small>我的产品都有什么？</small></h4>
-                <p>
-                    Craft，完全自己编写，<br>
-                    可以在我网站上下载到了。<br>
-                    向远系统，没时间开发。<br>
-                    校园工具，打算最近<br>
-                    研究研究这个。
-                </p>
-            </div>
-            <div class="col-4 content">
-                <h4 style="color: brown;"><small>"向远"怎么来的？</small></h4>
-                <p>
-                    也没什么，有一次，<br>
-                    家里来一个大姐姐，<br>
-                    我说了网站的事，<br>
-                    她给这网站取了些名字，<br>
-                    最终后我才相中了<br>
-                    "向远"这个名字。
-                </p>
-            </div>
+    <h1>向远小组</h1>
+    <p id="head">没错，这是我整的！</p>
+    <div>
+        <div class="content">
+            <h4 style="color: brown;"><small>为什么创建这个网站？</small></h4>
+            <p>
+                作者突发奇想，想做网站，<br>
+                自己学了一些技术，<br>
+                就把这个网站做出来了。<br>
+                同时也是为宣传自家产品，<br>
+                大家有兴趣可以看看。
+            </p>
+        </div>
+        <div class="content">
+            <h4 style="color: brown;"><small>我的产品都有什么？</small></h4>
+            <p>
+                Craft，完全自己编写，<br>
+                可以在我网站上下载到了。<br>
+                向远系统，没时间开发。<br>
+                校园工具，打算最近<br>
+                研究研究这个。
+            </p>
+        </div>
+        <div class="content">
+            <h4 style="color: brown;"><small>"向远"怎么来的？</small></h4>
+            <p>
+                也没什么，有一次，<br>
+                家里来一个大姐姐，<br>
+                我说了网站的事，<br>
+                她给这网站取了些名字，<br>
+                最终后我才相中了<br>
+                "向远"这个名字。
+            </p>
         </div>
     </div>
-    
-    <p>更多内容，<a href="https://space.bilibili.com/511437326">点此进入</a></p>
+    <br>
+    <p>copyright &copy; 2022 向远小组</p>
 </body>
 
 </html>

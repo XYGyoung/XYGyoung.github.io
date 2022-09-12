@@ -6,22 +6,34 @@
 	<title>Craft</title>
 	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="../stylesheet/mainpage.css" rel="stylesheet">
+    <link href="../imgs/logo.png" rel="shortcut icon" type="image/x-icon">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<header class="fixed-top">
-        <h1>Craft</h1>
-        <p>向远小组的最新游戏！</p>
+    <header class="fixed-top">
         <nav class="nav navbar-nav" role="navigation">
-            <ul class="nav nav-tabs nav-justified">
-                <li class="nav-link natural"><a href="../index.html">首页</a></li>
-                <li class="nav-link natural"><a href="../friends/index.html">我的同学</a></li>
-                <li class="nav-link active"><a href="#">Craft</a></li>
-                <li class="nav-link natural"><a href="../xyos/index.html">向远系统</a></li>
-                <li class="nav-link natural"><a href="../schtool/index.html">校园工具</a></li>
+            <ul class="nav">
+                <img id="logo" src="../imgs/logo.png" width="24" height="24">
+                <li class="nav-link"><a href="../index.html">首页</a></li>
+                <li class="nav-link"><a href="../blog/index.html">博客</a></li>
+                <li class="nav-link"><a href="#">Craft</a></li>
+                <li class="nav-link"><a href="../xyos/index.html">向远系统</a></li>
+                <li class="nav-link"><a href="../schtool/index.html">校园工具</a></li>
+                <li class="nav-link dropdown">
+                    <a href="#" id="dropdownMenuLink" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">其他</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a href="../keymake/index.html" class="dropdown-item">密钥生成器</a>
+                        <a href="https://vdse.bdstatic.com//192d9a98d782d9c74c96f09db9378d93.mp4" class="dropdown-item">千万不要点</a>
+                        <a href="https://space.bilibili.com/511437326" class="dropdown-item">我的B站</a>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
-    <br><br><br><br><br><br><br>
+    <h1>Craft</h1>
+    <p id="head">向远小组的最新游戏！</p>
 	<p>
 		Craft是一款没多大意思（暂时）的游戏，<br>
 		由向远小组成员开发，创作灵感来源于<a href="www.minecraft.net">《我的世界》。</a><br>
@@ -42,5 +54,6 @@
             <p>b220115  Windows: &nbsp;&nbsp;<a href="../downloads/build220115.exe">(点击这里)</a></p>
         </div>
     </div>
+    <p>copyright &copy; 2022 向远小组</p>
 </body>
 </html>

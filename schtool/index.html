@@ -2,25 +2,37 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>我的博客</title>
+		<title>校园工具</title>
         <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="../stylesheet/mainpage.css">
+        <link href="../imgs/logo.png" rel="shortcut icon" type="image/x-icon">
+        <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	</head>
     <body>
         <header class="fixed-top">
-            <h1>校园工具</h1>
-            <p>学生手机，你值得拥有！</p>
             <nav class="nav navbar-nav" role="navigation">
-                <ul class="nav nav-tabs nav-justified">
-                    <li class="nav-link natural"><a href="../index.html">首页</a></li>
-                    <li class="nav-link natural"><a href="../friends/index.html">我的同学</a></li>
-                    <li class="nav-link natural"><a href="../craft/index.html">Craft</a></li>
-                    <li class="nav-link natural"><a href="../xyos/index.html">向远系统</a></li>
-                    <li class="nav-link active"><a href="#">校园工具</a></li>
+                <ul class="nav">
+                    <img id="logo" src="../imgs/logo.png" width="24" height="24">
+                    <li class="nav-link"><a href="../index.html">首页</a></li>
+                    <li class="nav-link"><a href="../blog/index.html">博客</a></li>
+                    <li class="nav-link"><a href="../craft/index.html">Craft</a></li>
+                    <li class="nav-link"><a href="../xyos/index.html">向远系统</a></li>
+                    <li class="nav-link"><a href="#">校园工具</a></li>
+                    <li class="nav-link dropdown">
+                        <a href="#" id="dropdownMenuLink" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">其他</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a href="../keymake/index.html" class="dropdown-item">密钥生成器</a>
+                            <a href="https://vdse.bdstatic.com//192d9a98d782d9c74c96f09db9378d93.mp4" class="dropdown-item">千万不要点</a>
+                            <a href="https://space.bilibili.com/511437326" class="dropdown-item">我的B站</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </header>
-        <br><br><br><br><br><br><br>
+        <h1>校园工具</h1>
+        <p id="head">学生手机，你值得拥有！</p>
         <div class="card" style="
             background: linear-gradient(to bottom,red,rgba(255, 0, 0, 0.2));
             color: white;
@@ -28,7 +40,8 @@
             <br>
             <p><img src="../imgs/repairing.png" width="32" height="32">该页面正在维修中！</p>
             <p>若给你带来了不便，请谅解</p>
-            <p>原因:没做</p>
+            <p>原因:<del>懒</del>没开发</p>
         </div>
+        <p>copyright &copy; 2022 向远小组</p>
     </body>
 </html>

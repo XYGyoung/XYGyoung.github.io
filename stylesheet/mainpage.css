@@ -2,14 +2,23 @@ body
 {
 	text-align: center;
 	font-family: sans-serif;
-	background: linear-gradient(to bottom,rgb(0, 128, 255),rgb(0, 128, 255),skyblue) no-repeat fixed 100%;
+	font-size: xx-small;
+	background: linear-gradient(to bottom,rgb(0, 0, 144),rgb(0, 128, 256)) no-repeat fixed 100%;
+	padding-top: 30px;
+}
+p
+{
+	color: black;
+	margin: 5px;
 }
 header
 {
-	background: linear-gradient(to bottom,black,blue);
+	background: rgb(0, 0, 0);
+	height: 30px;
 }
-header p
+ul
 {
+	display: inline;
 	color: white;
 }
 h1
@@ -21,29 +30,36 @@ a
 	text-decoration: none;
 	color: black;
 }
+li
+{
+	width: 14vw;
+}
 li a
 {
 	color: white;
 }
-li.natural
+p#head
 {
 	color: white;
-	border: 1px white solid;
-	border-radius: 5px;	
 }
-nav.nav.navbar-nav ul.nav.nav-tabs.nav-justified li.active
+article
 {
-	background: linear-gradient(to bottom,rgb(0, 64, 255),rgb(0, 128, 255));
-	border-bottom: none;;
-	color: black;
+	text-align: left;
+	min-width: max-content;
+	width: 310px;
+	max-width: 500px;
+	margin: 0px auto 10px;
+	padding: 5px;
+	border-radius: 3px;
+	background: linear-gradient(to bottom,rgba(128, 128, 128, 1),rgba(128, 128, 128, 0.6),rgba(128, 128, 128, 0.3));
 }
 .content
 {
+	margin: 0px auto 5px;
+	width: 85vw;
 	padding: 10px;
-	background: linear-gradient(to bottom,rgba(128, 128, 128, 0.9),rgba(128, 128, 128, 0));
-	border: solid 1px;
-	border-radius: 10px;
-	min-height: 256px;
+	background: linear-gradient(to bottom,rgba(128, 128, 128, 1),rgba(128, 128, 128, 0.7),rgba(128, 128, 128, 0.3));
+	min-width: max-content;
 }
 .card
 {
@@ -52,4 +68,21 @@ nav.nav.navbar-nav ul.nav.nav-tabs.nav-justified li.active
 .card-header, .card-footer
 {
 	background: #999;
+}
+#logo
+{
+	margin: auto 0px;
+}
+.dropdown
+{
+	color: white;
+}
+.dropdown-menu
+{
+	background-color: black;
+}
+.dropdown-item
+{
+	color: white;
+	font-size: x-small;
 }
