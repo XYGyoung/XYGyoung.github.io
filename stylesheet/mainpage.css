@@ -2,9 +2,9 @@ body
 {
 	text-align: center;
 	font-family: sans-serif;
-	font-size: xx-small;
+	font-size: 6px;
 	background: linear-gradient(to bottom,rgb(0, 0, 144),rgb(0, 128, 256)) no-repeat fixed 100%;
-	padding-top: 30px;
+	padding-top: 60px;
 }
 p
 {
@@ -14,7 +14,7 @@ p
 header
 {
 	background: rgb(0, 0, 0);
-	height: 30px;
+	height: max-content;
 }
 ul
 {
@@ -30,10 +30,6 @@ a
 	text-decoration: none;
 	color: black;
 }
-li
-{
-	width: 14vw;
-}
 li a
 {
 	color: white;
@@ -47,7 +43,6 @@ article
 	text-align: left;
 	min-width: max-content;
 	width: 310px;
-	max-width: 500px;
 	margin: 0px auto 10px;
 	padding: 5px;
 	border-radius: 3px;
@@ -85,4 +80,17 @@ article
 {
 	color: white;
 	font-size: x-small;
+}
+.co
+{
+	display: inline-block;
+	margin: auto;
+	padding: auto;
+	min-width: max-content;
+	width: 33%;
+	font-size: 7px;
+	color: #000;
+	height: max-content;
+	border: black solid 1px;
+	background: gray;
 }

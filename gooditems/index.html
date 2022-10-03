@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>有趣的东西</title>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../stylesheet/mainpage.css">
+    <link href="../imgs/logo.png" rel="shortcut icon" type="image/x-icon">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header class="fixed-top">
+        <nav class="nav navbar-nav" role="navigation">
+            <ul class="nav">
+                <img id="logo" src="../imgs/logo.png" width="24" height="24">
+                <li class="nav-link"><a href="../index.html">首页</a></li>
+                <li class="nav-link"><a href="../blog/index.html">博客</a></li>
+                <li class="nav-link"><a href="../craft/index.html">Craft</a></li>
+                <li class="nav-link"><a href="../xyos/index.html">向远系统</a></li>
+                <li class="nav-link"><a href="../schtool/index.html">校园工具</a></li>
+                <li class="nav-link dropdown">
+                    <a href="#" id="dropdownMenuLink" class="dropdown-toggle" data-toggle="dropdown"
+                        aria-expanded="false">其他</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a href="#" class="dropdown-item">有趣的东西</a>
+                        <a href="https://vdse.bdstatic.com//192d9a98d782d9c74c96f09db9378d93.mp4"
+                            class="dropdown-item">千万不要点</a>
+                        <a href="https://space.bilibili.com/511437326" class="dropdown-item">我的B站</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>有趣的东西</h1>
+    <div class="container-fluid row">
+        <div class="co">
+            <h6>密钥生成器</h6>
+            <p>生成xxxxxx-xxxxxx-xxxxxx-xxxxxx-xxxxxx式密钥</p>
+            <p id="key" style="
+            border: black 2px solid;
+            margin: 0px auto 5px;
+            width: max-content;
+            background: white;
+            font-family: 'Courier New', Courier, monospace;">xxxxxx-xxxxxx-xxxxxx-xxxxxx-xxxxxx</p>
+            <input type="submit" value="生成" onclick="make()">
+        </div>
+        <div class="co">
+            <h6>碰碰球</h6>
+            <p>比羊了个羊还难的游戏见过吗？</p>
+            <iframe src="scripts/ball.html" width="150px" height="100px"></iframe>
+        </div>
+    </div>
+    <p>copyright &copy; 2022 向远小组</p>
+    <script src="scripts/codemaker.js"></script>
+</body>
+
+</html>
