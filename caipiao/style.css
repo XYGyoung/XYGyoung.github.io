@@ -1,0 +1,103 @@
+body {
+    background-color: skyblue;
+    text-align: center;
+}
+
+h1 {
+    color: blue;
+}
+
+.showing {
+    border: 1px solid black;
+    border-radius: 45px;
+    background-color: grey;
+    margin: auto;
+    padding: 5px 5px 15px 5px;
+    width: 350px;
+    height: 30px;
+    text-align: left;
+}
+
+.red {
+    border: 1px solid black;
+    border-radius: 45px;
+    background-color: red;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    margin: 0px 2px 0px 2px;
+    padding: 10px 15px 15px 10px;
+    color: white;
+    float: left;
+}
+
+.blue {
+    border: 1px solid black;
+    border-radius: 45px;
+    background-color: dodgerblue;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    margin: 0px 2px 0px 2px;
+    padding: 10px 15px 15px 10px;
+    color: white;
+    float: right
+}
+
+#cparea {
+    border: 2px solid black;
+    background-color: rgb(244, 132, 132);
+    width: 350px;
+    height: 350px;
+    margin: auto;
+}
+
+#cparea>div>input {
+    width: 20px;
+    display: inline-block;
+    margin: 1px 0px 1px 1px;
+}
+
+#cparea>div {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#dialog {
+    border: 1px solid black;
+    background-color: grey;
+    border-radius: 45px;
+    width: 750px;
+    height: 370px;
+    margin: auto;
+    padding: -20px 20px 20px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: x-large;
+    display: none;
+}
+
+#dialog>h1 {
+    color: red;
+}
+
+#dialog>button.cancel {
+    float: right;
+    width: 100px;
+    height: 60px;
+    margin: 5px 25px 5px 5px;
+    font-size: x-large;
+    border: 1px solid black;
+}
+
+#dialog>button.ok {
+    float: right;
+    width: 100px;
+    height: 60px;
+    margin: 5px 25px 5px 5px;
+    font-size: x-large;
+    border: 1px solid black;
+    background-color: dodgerblue;
+    color: white;
+}

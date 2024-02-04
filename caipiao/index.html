@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <title>来抽奖！</title>
+</head>
+
+<body>
+    <h1>在线抽奖小游戏</h1>
+    <h2>本次号码是：</h2>
+    <div class="showing">
+        <div class="red" id="fst">??</div>
+        <div class="red" id="scd">??</div>
+        <div class="red" id="trd">??</div>
+        <div class="red" id="fth">??</div>
+        <div class="red" id="fft">??</div>
+        <div class="blue" id="bfs">??</div>
+        <div class="blue" id="bls">??</div>
+    </div>
+    <br>
+    <button onclick="showAll()">刷新</button>
+    <br><br>
+    <h2>投注区：</h2>
+    <div id="cparea">
+        <br>
+        <img src="title.png">
+        <br><br>
+        <div id="d1z">
+            A:
+            <input type="text" id="r11" class="A">
+            <input type="text" id="r12" class="A">
+            <input type="text" id="r13" class="A">
+            <input type="text" id="r14" class="A">
+            <input type="text" id="r15" class="A">&nbsp;+
+            <input type="text" id="b11" class="A">
+            <input type="text" id="b12" class="A">
+        </div>
+        <div id="d2z">
+            B:
+            <input type="text" id="r21" class="B">
+            <input type="text" id="r22" class="B">
+            <input type="text" id="r23" class="B">
+            <input type="text" id="r24" class="B">
+            <input type="text" id="r25" class="B">&nbsp;+
+            <input type="text" id="b21" class="B">
+            <input type="text" id="b22" class="B">
+        </div>
+        <div id="d3z">
+            C:
+            <input type="text" id="r31" class="C">
+            <input type="text" id="r32" class="C">
+            <input type="text" id="r33" class="C">
+            <input type="text" id="r34" class="C">
+            <input type="text" id="r35" class="C">&nbsp;+
+            <input type="text" id="b31" class="C">
+            <input type="text" id="b32" class="C">
+        </div>
+        <div id="d4z">
+            D:
+            <input type="text" id="r41" class="D">
+            <input type="text" id="r42" class="D">
+            <input type="text" id="r43" class="D">
+            <input type="text" id="r44" class="D">
+            <input type="text" id="r45" class="D">&nbsp;+
+            <input type="text" id="b41" class="D">
+            <input type="text" id="b42" class="D">
+        </div>
+        <div id="d5z">
+            E:
+            <input type="text" id="r51" class="E">
+            <input type="text" id="r52" class="E">
+            <input type="text" id="r53" class="E">
+            <input type="text" id="r54" class="E">
+            <input type="text" id="r55" class="E">&nbsp;+
+            <input type="text" id="b51" class="E">
+            <input type="text" id="b52" class="E">
+        </div>
+        <br>
+        <button onclick="showdialog()">来一张</button>
+        <br><br>
+        <p>剩余钱数：<span id="leftmoney">0</span> 元</p>
+    </div>
+    <div id="dialog">
+        <h1>注意！</h1>
+        <p>本次投注需要花费 <span id="dauj"></span> 元</p>
+        <h4>是否继续操作？</h4>
+        <button onclick="gobet()" class="ok">来吧！</button>
+        <button onclick="stopbet()" class="cancel">再想想</button>
+    </div>
+</body>
+
+</html>
