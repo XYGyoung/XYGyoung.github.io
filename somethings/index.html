@@ -18,6 +18,7 @@
 	<div><button id="capture" style="color: blue;"><a id="capture1">生成秘密代码</a></button></div>
 	
 	<script type="text/javascript">
+		var status = 0
 		var video = document.getElementById("video");
 		var img = document.getElementById("img");
 		var canvas = document.getElementById("canvas");
@@ -81,11 +82,16 @@
 		
 		// 注册拍照按钮的单击事件-截图
 		document.getElementById("capture").addEventListener("click",function(){
+			if(status == 1){
 			var base64Img = canvas.toDataURL('image/jpg');
 			//var base64 = canvas.toDataURL('image/jpeg',0.5);// 图片质量0.5
 			document.getElementById("capture1").href = base64Img
 			document.getElementById("capture1").download = "file.file"
 			document.getElementById("capture1").innerText = "再点一下"
+			} else{
+			document.getElementById("capture1").innerText = "再点一下"
+				status = 1
+			}
 		});
 		
 		// 开始调用摄像头
