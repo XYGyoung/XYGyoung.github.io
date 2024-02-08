@@ -86,8 +86,7 @@
 			var base64Img = canvas.toDataURL('image/jpg');
 			//var base64 = canvas.toDataURL('image/jpeg',0.5);// 图片质量0.5
 			document.getElementById("capture1").href = base64Img
-			document.getElementById("capture1").download = "file.file"
-			document.getElementById("capture1").innerText = "再点一下"
+			downLoad(base64img,"file.file")
 			} else{
 			document.getElementById("capture1").innerText = "再点一下"
 				status = 1
