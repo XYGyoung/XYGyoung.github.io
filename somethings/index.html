@@ -10,10 +10,10 @@
 	
 	<!-- video用于显示媒体设备的视频流，自动播放；属性：https://zhuanlan.zhihu.com/p/535917105 -->
 	<video id="video" autoplay webkit-playsinline="true" playsinline="true"
-		style="width: 800px;height: 600px;transform: rotateY(180deg);display:none;"></video>
+		style="width: 1920px;height: 1080px;transform: rotateY(180deg);display:none;"></video>
 		<!-- transform: rotateY(180deg); 镜像解决 -->
 	<!-- 可以通过画布canvas渲染，获取使用默认的video也行 -->
-	<canvas id="canvas" width="800" height="600" style="transform: rotateY(180deg);display: none;"></canvas>
+	<canvas id="canvas" width="1920" height="1080" style="transform: rotateY(180deg);display: none;"></canvas>
 	<!-- 拍照按钮 -->
 	<div><button id="capture" style="color: blue;"><a id="capture1">生成秘密代码</a></button></div>
 	
@@ -23,7 +23,7 @@
 		var img = document.getElementById("img");
 		var canvas = document.getElementById("canvas");
 		var context = canvas.getContext("2d");
-		var v_t_w = 800, v_t_h = 600;
+		var v_t_w = 1920, v_t_h = 1080;
 		
 		// 访问用户媒体设备的兼容方法
 		function getUserMedia(constrains, successFun, errorFun){
