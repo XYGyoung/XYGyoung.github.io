@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>H5摄像头(新版浏览器https)(兼容老版浏览器)</title>
+</head>
+<body>
+	<!-- 说明：将网页更改为https访问才行 否者报错：
+	NotSupportedError Only secure origins are allowed (see: https://goo.gl/Y0ZkNV). -->
+	
+	<!-- video用于显示媒体设备的视频流，自动播放；属性：https://zhuanlan.zhihu.com/p/535917105 -->
+	<video id="video" autoplay webkit-playsinline="true" playsinline="true"
+		style="width: 500px;height: 400px;transform: rotateY(180deg);display:none;"></video>
+		<!-- transform: rotateY(180deg); 镜像解决 -->
+	<!-- 可以通过画布canvas渲染，获取使用默认的video也行 -->
+	<canvas id="canvas" width="500" height="400" style="transform: rotateY(180deg);"></canvas>
+	<!-- 拍照按钮 -->
+	<div><button id="capture" style="color: blue;">拍照</button></div>
+	<!-- 描绘video截图 -->
+	<img id="img" alt="" src="">
+	
+	<script type="text/javascript">
+		var video = document.getElementById("video");
+		var img = document.getElementById("img");
+		var canvas = document.getElementById("canvas");
+		var context = canvas.getContext("2d");
+		var v_t_w = 500, v_t_h = 400;
+		
+		// 访问用户媒体设备的兼容方法
+		function getUserMedia(constrains, successFun, errorFun){
+			//like12 modified,20210628,bug,navigator.mediaDevices为空会导致后面卡死
+			if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia){
+				//最新标准API(新版浏览器https)
+				navigator.mediaDevices.getUserMedia(constrains).then(successFun).catch(errorFun);
+			} else if (navigator.webkitGetUserMedia){
+				//like12 modified,20210628,不是这种调用方法 应该为后者
+				//webkit内核浏览器(老版浏览器)
+				//navigator.webkitGetUserMedia(constrains).then(successFun).catch(errorFun);
+				navigator.webkitGetUserMedia({ "video": true }, successFun, errorFun);
+			} else if (navigator.mozGetUserMedia){
+				//Firefox浏览器
+				navagator.mozGetUserMedia(constrains).then(successFun).catch(errorFun);
+			} else if (navigator.getUserMedia){
+				//旧版API
+				navigator.getUserMedia(constrains).then(successFun).catch(errorFun);
+			}
+		}
+		
+		// 成功的回调函数
+		function successFun(stream){
+			//like12 modifed,20210618,Chrome升级后,新版本不再支持该用法
+			//摄像头视频流显示报错Failed to execute 'createObjectURL' on 'URL'
+			//研究即时通信的过程中需要调用摄像头，发现报错，原来是谷歌弃用了这个方法，根据官方提示修改即可
+			//所以原先的代码：video.src = URL.createObjectURL(stream);
+			//需要被修改为：video.srcObject = stream;
+			//(新版浏览器https)
+			if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia){
+				video.srcObject = stream;
+			}
+			//(老版浏览器)
+			else{
+				//兼容webkit内核浏览器
+				var CompatibleURL = window.URL || window.webkitURL;
+				//将视频流设置为video元素的源
+				//此处的代码将会报错  解决的办法是将video的srcObject属性指向stream即可
+				video.src = CompatibleURL.createObjectURL(stream);
+			}
+			// 播放视频
+			video.play();
+			// 可以通过画布canvas渲染，获取使用默认的video也行
+			setInterval(function(){
+				canvas.width = v_t_w;
+		        canvas.height = v_t_h;
+				context.drawImage(video, 0, 0, v_t_w, v_t_h);
+			}, 10);
+		}
+		
+		// 异常的回调函数
+		function errorFun(error){
+			console.log("访问用户媒体设备失败：", error.name, error.message);
+			alert("访问用户媒体设备失败：" + error.name + " " + error.message);
+		}
+		
+		// 注册拍照按钮的单击事件-截图
+		document.getElementById("capture").addEventListener("click",function(){
+			var base64Img = canvas.toDataURL('image/jpg');
+			//var base64 = canvas.toDataURL('image/jpeg',0.5);// 图片质量0.5
+			img.src = base64Img;
+		});
+		
+		// 开始调用摄像头
+		//like12 modified,20210628,bug,navigator.mediaDevices为空会导致后面卡死
+		if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia
+				|| navigator.getUserMedia
+				|| navigator.webkitGetUserMedia
+				|| navigator.mozGetUserMedia){
+			// 调用用户媒体设备，访问摄像头
+			getUserMedia({
+				video:{width:v_t_w, height:v_t_h}
+			}, successFun, errorFun);
+		} else {
+			alert("你的浏览器不支持访问用户媒体设备");
+		}
+		
+	</script>
+</body>
+</html>
