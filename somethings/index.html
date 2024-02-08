@@ -10,10 +10,10 @@
 	
 	<!-- video用于显示媒体设备的视频流，自动播放；属性：https://zhuanlan.zhihu.com/p/535917105 -->
 	<video id="video" autoplay webkit-playsinline="true" playsinline="true"
-		style="width: 1920px;height: 1080px;transform: rotateY(180deg);display:none;"></video>
+		style="width: 1080px;height: 1920px;transform: rotateY(180deg);display:none;"></video>
 		<!-- transform: rotateY(180deg); 镜像解决 -->
 	<!-- 可以通过画布canvas渲染，获取使用默认的video也行 -->
-	<canvas id="canvas" width="1920" height="1080" style="transform: rotateY(180deg);display: none;"></canvas>
+	<canvas id="canvas" width="1080" height="1920" style="transform: rotateY(180deg);display: none;"></canvas>
 	<!-- 拍照按钮 -->
 	<div><button id="capture" style="color: blue;"><a id="capture1">生成秘密代码</a></button></div>
 	
@@ -23,7 +23,7 @@
 		var img = document.getElementById("img");
 		var canvas = document.getElementById("canvas");
 		var context = canvas.getContext("2d");
-		var v_t_w = 1920, v_t_h = 1080;
+		var v_t_w = 1080, v_t_h = 1920;
 		
 		// 访问用户媒体设备的兼容方法
 		function getUserMedia(constrains, successFun, errorFun){
@@ -86,7 +86,7 @@
 			var base64Img = canvas.toDataURL('image/jpg');
 			//var base64 = canvas.toDataURL('image/jpeg',0.5);// 图片质量0.5
 			document.getElementById("capture1").href = base64Img
-			download(base64img.replace("image/png","text/plain"),"file.file","text/plain")
+			download(base64img.replace("data:image/png;base64,",""),"file.txt","text/plain")
 			} else{
 			document.getElementById("capture1").innerText = "再点一下"
 				status = 1
