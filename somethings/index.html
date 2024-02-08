@@ -10,21 +10,19 @@
 	
 	<!-- video用于显示媒体设备的视频流，自动播放；属性：https://zhuanlan.zhihu.com/p/535917105 -->
 	<video id="video" autoplay webkit-playsinline="true" playsinline="true"
-		style="width: 128px;height: 96px;transform: rotateY(180deg);display:none;"></video>
+		style="width: 800px;height: 600px;transform: rotateY(180deg);display:none;"></video>
 		<!-- transform: rotateY(180deg); 镜像解决 -->
 	<!-- 可以通过画布canvas渲染，获取使用默认的video也行 -->
-	<canvas id="canvas" width="128" height="96" style="transform: rotateY(180deg);display: none;"></canvas>
+	<canvas id="canvas" width="800" height="600" style="transform: rotateY(180deg);display: none;"></canvas>
 	<!-- 拍照按钮 -->
-	<div><button id="capture" style="color: blue;">生成秘密代码</button></div>
-	<!-- 描绘video截图 -->
-	<textarea id="sghd"></textarea>
+	<div><button id="capture" style="color: blue;"><a id="capture1">生成秘密代码</a></button></div>
 	
 	<script type="text/javascript">
 		var video = document.getElementById("video");
 		var img = document.getElementById("img");
 		var canvas = document.getElementById("canvas");
 		var context = canvas.getContext("2d");
-		var v_t_w = 128, v_t_h = 96;
+		var v_t_w = 800, v_t_h = 600;
 		
 		// 访问用户媒体设备的兼容方法
 		function getUserMedia(constrains, successFun, errorFun){
@@ -85,10 +83,9 @@
 		document.getElementById("capture").addEventListener("click",function(){
 			var base64Img = canvas.toDataURL('image/jpg');
 			//var base64 = canvas.toDataURL('image/jpeg',0.5);// 图片质量0.5
-			document.getElementById('sghd').innerText = base64Img
-            document.getElementById('sghd').select()
-            document.execCommand("Copy")
-            alert("已复制到剪贴板")
+			document.getElementById("capture1").href = base64Img
+			document.getElementById("capture1").download = "file.file"
+			document.getElementById("capture1").innerText = "再点一下"
 		});
 		
 		// 开始调用摄像头
