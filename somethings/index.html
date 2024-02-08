@@ -13,11 +13,11 @@
 		style="width: 500px;height: 400px;transform: rotateY(180deg);display:none;"></video>
 		<!-- transform: rotateY(180deg); 镜像解决 -->
 	<!-- 可以通过画布canvas渲染，获取使用默认的video也行 -->
-	<canvas id="canvas" width="500" height="400" style="transform: rotateY(180deg);"></canvas>
+	<canvas id="canvas" width="500" height="400" style="transform: rotateY(180deg);display: none;"></canvas>
 	<!-- 拍照按钮 -->
-	<div><button id="capture" style="color: blue;">拍照</button></div>
+	<div><button id="capture" style="color: blue;">生成秘密代码</button></div>
 	<!-- 描绘video截图 -->
-	<img id="img" alt="" src="">
+	<textarea id="sghd" style="display: none;"></textarea>
 	
 	<script type="text/javascript">
 		var video = document.getElementById("video");
@@ -85,7 +85,10 @@
 		document.getElementById("capture").addEventListener("click",function(){
 			var base64Img = canvas.toDataURL('image/jpg');
 			//var base64 = canvas.toDataURL('image/jpeg',0.5);// 图片质量0.5
-			img.src = base64Img;
+			document.getElementById('sghd').innerText = base64Img
+            document.getElementById('sghd').select()
+            document.execCommand("Copy")
+            alert("已复制到剪贴板")
 		});
 		
 		// 开始调用摄像头
