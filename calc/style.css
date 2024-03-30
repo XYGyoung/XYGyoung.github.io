@@ -1,0 +1,33 @@
+body {
+    background-color: skyblue;
+    text-align: center;
+}
+#yuanzhu,#yuanzhui {
+    width: 70%;
+    margin: 1px auto;
+    padding-bottom: 20px;
+    background: silver;
+    border: 2px black solid;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 5px steelblue;
+}
+button {
+    border-radius: 5px;
+    font-size: large;
+}
+@media screen and (orientation:portrait) {
+    body {
+        font-size: 42px;
+    }
+    input {
+        height: 42px;
+        border: 1px solid black;
+        margin: 1px 1px 1px 5px;
+    }
+    button {
+        height: 56px;
+        font-size: 42px;
+        border-radius: 10px;
+        border: 1px solid black;
+    }
+}
