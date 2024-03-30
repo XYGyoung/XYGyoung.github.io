@@ -1,37 +1,105 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <link type="text/css" rel="stylesheet" href="style.css">
-        <title>圆柱圆锥计算器</title>
-    </head>
-    <body>
-        <script src="script.js"></script>
-        <h1>在线圆柱圆锥计算器</h1>
-        <p>在表格中给出两个量即可推出所有信息</p>
-        <div id="yuanzhu">
-            <h4>圆柱区</h4>
-            底面半径(r)=<input type="number" id="ar"><br>
-            底面直径(d)=<input type="number" id="ad"><br>
-            底面周长(C)=<input type="number" id="ac"><br>
-            高(h)=<input type="number" id="ah"><br>
-            底面积(S<sub>底</sub>)=<input type="number" id="sd"><br>
-            侧面积(S<sub>侧</sub>)=<input type="number" id="sc"><br>
-            表面积(S<sub>表</sub>)=<input type="number" id="sb"><br>
-            体积(V)=<input type="number" id="av"><br><br>
-            <button onclick="yuanzhu()">计算</button>
-        </div><!--
-        <br>
-        <div id="yuanzhui">
-            <h4>圆锥区</h4>
-            底面半径(r)=<input type="number" id="br"><br>
-            底面直径(d)=<input type="number" id="bd"><br>
-            底面周长(C)=<input type="number" id="bc"><br>
-            高(h)=<input type="number" id="bh"><br>
-            底面积(S<sub>底</sub>)=<input type="number" id="bs"><br>
-            体积(V)=<input type="number" id="bv"><br><br>
-            <button onclick="yuanzhui()">计算</button>
-        </div>-->
-        <p>Copyright 2024 &copy; 向远小组</p>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <title>圆柱圆锥计算器</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>在线圆柱圆锥计算器</h1>
+    <p>在表格中给出两个量即可推出所有信息</p>
+    <p>（注：遇到类似28.2599999999999的情况，四舍五入即可）</p>
+    <div id="yuanzhu">
+        <h4>圆柱区</h4>
+        底面半径(r)=<input type="number" id="ar"><br>
+        底面直径(d)=<input type="number" id="ad"><br>
+        底面周长(C)=<input type="number" id="ac"><br>
+        高(h)=<input type="number" id="ah"><br>
+        底面积(S<sub>底</sub>)=<input type="number" id="sd"><br>
+        侧面积(S<sub>侧</sub>)=<input type="number" id="sc"><br>
+        表面积(S<sub>表</sub>)=<input type="number" id="sb"><br>
+        体积(V)=<input type="number" id="av"><br><br>
+        <button onclick="yuanzhu()">计算</button>
+    </div>
+    <br>
+    <script>
+        function zhui() {
+            r = document.getElementById('br')
+            d = document.getElementById('bd')
+            c = document.getElementById('bc')
+            h = document.getElementById('bh')
+            s = document.getElementById('bs')
+            v = document.getElementById('bv')
+            list = [parseFloat(r.value), parseFloat(d.value), parseFloat(c.value), parseFloat(h.value), parseFloat(s.value), parseFloat(v.value)]
+            nans = 0
+            for (let i = 0; i < list.length; i++) {
+                if (list[i] <= 0) {
+                    alert("爱算算不算滚")
+                    return -1
+                }
+                if (list[i].toString() == 'NaN') {
+                    nans += 1
+                }
+            }
+            if (nans > 4) {
+                alert("缺少条件")
+                return -1
+            }
+            if (isntnan(3, 3)) {
+                a = 0
+                b = list[3]
+                if (isntnan(3, 0)) {
+                    a = list[0]
+                } else if (isntnan(3, 1)) {
+                    a = list[1] / 2
+                } else if (isntnan(3, 2)) {
+                    a = list[2] / 6.28
+                } else if (isntnan(3, 4)) {
+                    a = Math.sqrt(list[4] / 3.14)
+                } else if (isntnan(3, 5)) {
+                    a = Math.sqrt(list[5] * 3 / 3.14 / b)
+                }
+                r.value = a
+                d.value = 2 * a
+                c.value = 6.28 * a
+                h.value = b
+                s.value = 3.14 * a * a
+                v.value = (1 / 3 * 3.14 * a * a * b).toFixed(10) * 2 / 2
+            }
+            if (isntnan(5, 5)) {
+                a = 0
+                b = list[5]
+                if (isntnan(5, 0)) {
+                    a = list[0]
+                } else if (isntnan(5, 1)) {
+                    a = list[1] / 2
+                } else if (isntnan(5, 2)) {
+                    a = list[2] / 6.28
+                } else if (isntnan(5, 4)) {
+                    a = Math.sqrt(list[4] / 3.14)
+                }
+                r.value = a
+                d.value = 2 * a
+                c.value = 6.28 * a
+                h.value = b * 3 / a / a / 3.14
+                s.value = 3.14 * a * a
+                v.value = b
+            }
+        }</script>
+    <div id="yuanzhui">
+        <h4>圆锥区</h4>
+        底面半径(r)=<input type="number" id="br"><br>
+        底面直径(d)=<input type="number" id="bd"><br>
+        底面周长(C)=<input type="number" id="bc"><br>
+        高(h)=<input type="number" id="bh"><br>
+        底面积(S<sub>底</sub>)=<input type="number" id="bs"><br>
+        体积(V)=<input type="number" id="bv"><br><br>
+        <button onclick="zhui()">计算</button>
+    </div>
+    <p>Copyright 2024 &copy; 向远小组</p>
+</body>
+
 </html>

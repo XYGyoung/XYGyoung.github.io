@@ -8,9 +8,6 @@ function yuanzhu() {
     sb = document.getElementById('sb')
     v = document.getElementById('av')
     list = [parseFloat(r.value), parseFloat(d.value), parseFloat(c.value), parseFloat(h.value), parseFloat(sd.value), parseFloat(sc.value), parseFloat(sb.value), parseFloat(v.value)]
-    scls = [parseFloat(r.value), parseFloat(d.value), parseFloat(c.value), parseFloat(sd.value)]
-    hcls = [parseFloat(h.value), parseFloat(sc.value), parseFloat(sb.value), parseFloat(v.value)]
-    acls = [parseFloat(sc.value), parseFloat(sb.value), parseFloat(v.value)]
     nans = 0
     for (let i = 0; i < list.length; i++) {
         if (list[i] <= 0) {
@@ -85,7 +82,7 @@ function yuanzhu() {
             a = list[2] / 6.28
         } else if (isntnan(4, 6)) {
             a = Math.sqrt(list[4] / 3.14)
-        } else if (isntnan(5,6)) {
+        } else if (isntnan(5, 6)) {
             a = Math.sqrt((list[6] - list[5]) / 3.14)
         }
         r.value = a
