@@ -23,6 +23,7 @@ button {
         height: 42px;
         border: 1px solid black;
         margin: 1px 1px 1px 5px;
+        text-size: 36px;
     }
     button {
         height: 56px;
