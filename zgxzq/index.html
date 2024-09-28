@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>中国地理识图测试</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <h1>中国地理识图测试</h1>
+    <img src="quiz/0.png" id="quiz">
+    <p>填空：</p>
+    <form onsubmit="return false">
+        <input id="ans">
+        <button onclick="setQuiz()" id="clg">挑战</button>
+    </form>
+    <div id="rep">
+        <h2>成绩结算</h2>
+        <p>您的得分为：<span id="score"></span><br>
+        正确率：<span id="acc"></span><br>
+        时间：<span id="time"></span><br>
+        评级：<span id="rank"></span><br>
+        历史最高：<span id="best"></span></p>
+        <button onclick="location.reload()">返回</button><br><br>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
