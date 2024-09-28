@@ -1,0 +1,22 @@
+body {
+    background-color: #7bcc5b;
+    text-align: center;
+}
+
+img#quiz {
+    width: 50%;
+    height: calc(35vw);
+    border: 1px black solid;
+}
+
+div#rep {
+    background: #ddff00;
+    width: 60%;
+    position: absolute;
+    z-index: 2;
+    top: 20%;
+    left: 20vw;
+    box-shadow: 5px 5px 5px #52873d;
+    border: 1px solid black;
+    display: none;
+}
