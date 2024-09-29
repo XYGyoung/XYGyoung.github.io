@@ -6,6 +6,7 @@ var corrents = 0
 var time = 0
 var score = 0
 if (localStorage.getItem("best") == null) localStorage.setItem("best", 0)
+document.getElementById("scoreing").innerText = localStorage.getItem("best")
 function setQuiz() {
     for (let i = 0; i < 25; i++) {
         var a = Math.floor(Math.random() * randarr.length)
@@ -35,11 +36,11 @@ function showQuiz() {
 }
 
 function rep() {
-    document.getElementById("rep").style.display="block"
+    document.getElementById("rep").style.display = "block"
     var rank = ""
     document.getElementById("score").innerText = score
     document.getElementById("time").innerText = time.toString() + "s"
-    document.getElementById("acc").innerText = (corrents * 4).toString() +"%"
+    document.getElementById("acc").innerText = (corrents * 4).toString() + "%"
     if (score < 700000) rank = "F"
     else if (score < 820000) rank = "C"
     else if (score < 880000) rank = "B"
