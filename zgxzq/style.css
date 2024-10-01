@@ -20,3 +20,9 @@ div#rep {
     border: 1px solid black;
     display: none;
 }
+
+img {
+    background: #fff;
+}
+
+input{width:5%}

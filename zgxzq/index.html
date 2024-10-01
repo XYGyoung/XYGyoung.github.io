@@ -10,10 +10,11 @@
 <body>
     <h1>中国地理识图测试</h1>
     <p>最高得分：<span id="scoreing"></span></p>
+    <p id="note">--/40</p>
     <img src="quiz/0.png" id="quiz">
     <p>填空：</p>
     <form onsubmit="return false">
-        <input id="ans">
+        <input id="ans"><span id="tigan"></span>
         <button onclick="setQuiz()" id="clg">挑战</button>
     </form>
     <div id="rep">
