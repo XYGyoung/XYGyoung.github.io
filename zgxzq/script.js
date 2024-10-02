@@ -61,7 +61,7 @@ function showQuiz() {
     }
     if (quiznote == 40) {
         time = (Date.now() - time) / 1000
-        score = Math.floor(corrents * 25000 + 72000 - 6 * time)
+        score = Math.floor(corrents * 25000 + 72000 - 600 * time)
         rep()
         return;
     }
