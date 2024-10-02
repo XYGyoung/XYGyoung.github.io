@@ -65,7 +65,7 @@ function showQuiz() {
         rep()
         return;
     }
-    document.getElementById('quiz').setAttribute("src", "quiz/" + quiz[quiznote].toString() + ".png")
+    document.getElementById('quiz').setAttribute("src", "quiz/freecompress-" + quiz[quiznote].toString() + ".png")
     document.getElementById('tigan').innerText = tigan[quiz[quiznote]-1]
     quiznote += 1
     document.getElementById('note').innerText = quiznote.toString()+"/40"
